@@ -1,0 +1,112 @@
+@import "../../style.scss";
+
+.navbar {
+    margin-bottom: 0.1rem;
+    @include themify($themes) {
+
+    font-family: roboto,sans-serif;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    padding: 9px 20px;
+    height: 50px;
+    border-bottom: 1px solid themed('border');
+    position: sticky;
+    top: 0;   // making it sticky
+    z-index: 1;
+    background: themed('bg');  
+    color: themed('textColor');
+
+    
+    @include mobile {
+    padding: 0;
+    // margin-left: auto; 
+    }
+    // width: 93%;
+
+
+    .left{
+    gap: 30px;
+        display: flex;
+        align-items: center;
+
+        span{
+            font-weight: bold;
+            font-size: 20px;
+            color: themed('logo');
+
+            @include mobile {
+                padding: 10px;
+            }
+        }
+
+        .search{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid themed('border');
+            border-radius: 5px;
+            padding: 5px;
+
+            @include mobile {
+           margin-left: 13%;
+            }
+            input {
+               border: none;
+               width: 300px;
+               outline: none ;
+               background: transparent;
+               color: themed('textColor');
+
+
+               @include mobile{
+                display: none;
+               }
+
+               @include tablet{
+                width: 250px;
+               }
+
+               @include medium {
+                width: 100%;
+            }
+            }
+        }
+     }
+    .right{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        @include mobile {
+            display: none;
+        }
+        // @include medium {
+        //     display: none;
+        // }
+
+        .user{
+            gap: 10px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+        }
+
+        img{
+            object-fit: cover;
+            width: 30px;
+            height: 30px; 
+            border-radius: 50px;
+
+            @include mobile {
+                display: none;
+            }
+            @include tablet {
+                display: none;
+            }
+        }
+
+        span{}
+    }
+}
+}

@@ -1,0 +1,19 @@
+@import "../../style.scss";
+
+.home {
+  background: gainsboro;
+  @include themify($themes) {
+    background: themed("bgsoft");
+    color: themed("textColor");
+    padding: 20px 0 20px 30px;
+    font-family: roboto, sans-serif;
+
+    @include mobile {
+      padding: 7%;
+      // margin-top: 0;
+    }
+    @include tablet {
+      padding: 20px;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+// style.scss (or any CSS file you're using)
+.dark-mode-transition {
+    transition: background-color 0.6s ease, color 0.6s ease; /* Add more properties as needed */
+  }
+  
+  /* Apply the transition to elements affected by dark mode */
+  
