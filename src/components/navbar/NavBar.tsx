@@ -29,9 +29,9 @@ const NavBar = () => {
       
       <div className="left">
         <Link to="/" style={{textDecoration:"none"}} >
-        <span>ChatMap</span>
+        <span>CM</span>
         </Link>
-        <HomeOutlinedIcon/>
+        {/* <HomeOutlinedIcon/> */}
         
         { darkMode ?
          <WbSunnyOutlinedIcon onClick={toggle} /> :

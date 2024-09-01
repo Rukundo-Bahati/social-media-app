@@ -5,7 +5,8 @@ $themes: (
     logo: darkblue,
     bgSoft: gainsboro,
     textColorSoft: #555,
-    border: lightgray
+    border: lightgray,
+    postColor: #1d4ed8
   ),
   dark: (
     textColor: whitesmoke,
@@ -13,7 +14,8 @@ $themes: (
     logo: #0ef,
     bgsoft: #333,
     textColorSoft: lightgray,
-    border: #444
+    border: #444,
+    postColor: #eee
   )
 );
 

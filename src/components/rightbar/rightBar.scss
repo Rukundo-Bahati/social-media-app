@@ -1,133 +1,128 @@
 @import "../../style.scss";
 
-
-
-
 .rightbar {
-    background: gainsboro;
-    @include themify($themes) {
+  background: gainsboro;
+  @include themify($themes) {
     flex: 3;
     position: sticky;
     top: 70px;
-    height: calc(100vh - 70px);  // making right bar unscrollable when home page is being scrolled
+    height: calc(
+      100vh - 70px
+    ); // making right bar unscrollable when home page is being scrolled
     overflow: scroll;
-    background-color: themed('bgsoft');
-    font-family: roboto,sans-serif;
+    background-color: themed("bgsoft");
+    font-family: roboto, sans-serif;
     width: 100%;
 
-    
-   @include mobile {
-    display: none;
-   }
-
-   @include tablet   {
-    display: none;
-   }
-
-    &::-webkit-scrollbar {   // removing scroll feature
-        display: none;
+    @include mobile {
+      display: none;
     }
-    
+
+    @include tablet {
+      display: none;
+    }
+
+    &::-webkit-scrollbar {
+      // removing scroll feature
+      display: none;
+    }
+
     .container {
-        color: themed('textcolor');
-        padding: 20px;
-       
-        .item {
-            background: themed('bg');
-            padding: 10px;
-            border-radius: 6px;
-            box-shadow: 0 0 9px grey;
-            margin: 30px;
-            position: relative;
-            margin-top: 0;
-            
-        }
-        span {
-            color: gray;
-        }
-        .user {
-               display: flex;
-               align-content: space-between;
-               align-items: center;
-               margin: 20px 0;
-               
-            .userInfo {
-                 display: flex; 
-                 align-items: center;
-                 gap: 20px;
-                 position: relative;
-                 
-                 @include middle {
-                    gap: 20px;
-                    }
+      color: themed("textcolor");
+      padding: 20px;
 
-                img {
-                    width: 40px;
-                    height: 40px;
-                    border-radius: 50%;
-                    object-fit: cover ;
-                }
-               
-                .online { 
-                    width: 12px;
-                    height: 12px;
-                    border-radius: 50px;
-                    background: limegreen;
-                    position: absolute;
-                    top: 0;
-                    left: 30px;
-                }
+      .item {
+        background: themed("bg");
+        padding: 10px;
+        border-radius: 6px;
+        margin: 30px;
+        position: relative;
+        margin-top: 0;
+      }
+      span {
+        color: gray;
+      }
+      .user {
+        display: flex;
+        align-content: space-between;
+        align-items: center;
+        margin: 20px 0;
 
-                  
-                }
+        .userInfo {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          position: relative;
 
-                .time {
-                    position:absolute;
-                    right: 60px;
-                    color: themed("textColorSoft");
-                    margin-top: 3rem;
-                    font-size: 15px;
-                   }
-
-                span {
-                    font-weight: 500;
-                    color: themed("textColor");
-                  
-                }
-                p {
-                   
-                    color: themed('textColor');
-                    gap: 12px;
-                }
-            }
-        }
-        .buttons {
-           display: flex;
-           align-items: center;
-           gap: 10px;
-           position: absolute;
-           right: 5px;
-           font-weight: bold;
-           @include middle {
+          @include middle {
+            gap: 20px;
             display: flex;
             flex-direction: column;
-            gap: 12px;
-            }
+          }
 
-           button {
-            border: none;
-            padding: 5px;
-            color: #fff;
-            cursor: pointer;
-            
-            &:first-child {
-                background: #6271ff;
-            }
+          img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
 
-            &:last-child {
-                background: #f0544f;
-            }
-           }
+          .online {
+            width: 12px;
+            height: 12px;
+            border-radius: 50px;
+            background: limegreen;
+            position: absolute;
+            top: 0;
+            left: 30px;
+          }
         }
+
+        .time {
+          position: absolute;
+          right: 60px;
+          color: themed("textColorSoft");
+          margin-top: 3rem;
+          font-size: 15px;
+        }
+
+        span {
+          font-weight: 500;
+          color: themed("textColor");
+        }
+        p {
+          color: themed("textColor");
+          gap: 12px;
+        }
+      }
     }
+    .buttons {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      position: absolute;
+      right: 5px;
+      font-weight: bold;
+      @include middle {
+        // display: flex;
+        // flex-direction: column;
+        // gap: 12px;
+      }
+
+      button {
+        border: none;
+        padding: 5px;
+        color: #fff;
+        cursor: pointer;
+
+        &:first-child {
+          background: #6271ff;
+        }
+
+        &:last-child {
+          background: #f0544f;
+        }
+      }
+    }
+  }
 }
